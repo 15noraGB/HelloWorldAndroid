@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.helloWorldTextView.text = "Hola a todos"
+        binding.helloWorld.text = "Hola a todos"
     }
 
 }
