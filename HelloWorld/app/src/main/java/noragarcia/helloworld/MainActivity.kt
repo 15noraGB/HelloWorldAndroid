@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        binding.helloWorld.text = "Hola a todos"
+        binding.textViewTitle.text = "Felicidades!"
+        binding.textViewSubtitle.text = "Disfruta del día"
+        binding.fotoTarta.setImageResource(R.drawable.tarta)
     }
 
 }
