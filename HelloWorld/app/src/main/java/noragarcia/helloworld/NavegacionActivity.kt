@@ -29,5 +29,9 @@ class NavegacionActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+        binding.HelloWorld.setOnClickListener {
+            val intent = Intent(this, HelloWorldActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
