@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
+
 class ListaCompraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -26,7 +27,7 @@ class ListaCompraActivity : AppCompatActivity() {
 
 
         val recycler = findViewById<RecyclerView>(R.id.recyclerListaCompra)
-        recycler.layoutManager = LinearLayoutManager(this)
+
 
 
         val listaEstatica = listOf(

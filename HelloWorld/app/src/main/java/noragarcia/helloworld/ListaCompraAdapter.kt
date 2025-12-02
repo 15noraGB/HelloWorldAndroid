@@ -13,9 +13,10 @@ class ListaCompraAdapter(private val items: List<String>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.activity_lista_compra, parent, false)
+            .inflate(R.layout.recycler_row, parent, false) // <- Cambiado
         return ViewHolder(view)
     }
+
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.texto.text = items[position]
