@@ -27,22 +27,28 @@ class ListaCompraActivity : AppCompatActivity() {
 
 
         val recycler = findViewById<RecyclerView>(R.id.recyclerListaCompra)
+        recycler.layoutManager = LinearLayoutManager(this)
 
 
 
-        val listaEstatica = listOf(
-            "Pan",
-            "Leche",
-            "Huevos",
-            "Arroz",
-            "Pasta",
-            "Manzanas"
-        )
+        fun getShopItems(): List<ShopItem> {
+            return listOf(
+                ShopItem("Pan"),
+                ShopItem("Leche"),
+                ShopItem("Huevos"),
+                ShopItem("Arroz"),
+                ShopItem("Pasta"),
+                ShopItem("Manzanas")
+            )
+        }
+
+
+        recycler.adapter = ListaCompraAdapter(getShopItems())
+
 
 
         recycler.layoutManager = LinearLayoutManager(this)
 
 
-        recycler.adapter = ListaCompraAdapter(listaEstatica)
     }
 }
