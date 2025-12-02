@@ -2,7 +2,6 @@ package noragarcia.helloworld
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import noragarcia.helloworld.databinding.ActivityHelloWorldBinding
 import noragarcia.helloworld.databinding.ActivityResultadoHelloWorldBinding
 
 class ResultadoHelloWorldActivity : AppCompatActivity() {
@@ -15,7 +14,7 @@ class ResultadoHelloWorldActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Recuperamos el nombre enviado desde HelloWorldActivity
-        val nombre = intent.getStringExtra("textPersonName")
+        val nombre = intent.getStringExtra("nombre")
 
         // Mostramos el mensaje en el TextView usando binding
         binding.textViewTitle.text = if (!nombre.isNullOrEmpty()) {
@@ -23,6 +22,5 @@ class ResultadoHelloWorldActivity : AppCompatActivity() {
         } else {
             "Holis! Bienvenido a mi app"
         }
-
-           }
+    }
 }
