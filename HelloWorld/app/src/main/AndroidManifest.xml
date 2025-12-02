@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
         <activity
+            android:name=".ListaCompraActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResultadoHelloWorldActivity"
             android:exported="false" />
         <activity

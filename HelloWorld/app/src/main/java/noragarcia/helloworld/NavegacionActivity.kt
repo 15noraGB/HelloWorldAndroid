@@ -33,5 +33,9 @@ class NavegacionActivity : AppCompatActivity() {
             val intent = Intent(this, HelloWorldActivity::class.java)
             startActivity(intent)
         }
+        binding.listaCompra.setOnClickListener {
+            val intent = Intent(this, ListaCompraActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
