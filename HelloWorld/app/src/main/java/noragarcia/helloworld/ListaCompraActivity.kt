@@ -22,12 +22,12 @@ class ListaCompraActivity : AppCompatActivity() {
         // Inicializar lista con productos existentes
         shopItems.addAll(
             listOf(
-                ShopItem("Pan", quantity = 1),
-                ShopItem("Leche", quantity = 3),
-                ShopItem("Huevos", quantity = 12),
-                ShopItem("Arroz", quantity = 2),
-                ShopItem("Pasta", quantity = 2),
-                ShopItem("Manzanas", quantity = 10)
+                ShopItem("Pan", quantity = 0),
+                ShopItem("Leche", quantity = 2),
+                ShopItem("Huevos", quantity = 11),
+                ShopItem("Arroz", quantity = 1),
+                ShopItem("Pasta", quantity = 1),
+                ShopItem("Manzanas", quantity = 9)
             )
         )
 

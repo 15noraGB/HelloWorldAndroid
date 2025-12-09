@@ -37,5 +37,10 @@ class NavegacionActivity : AppCompatActivity() {
             val intent = Intent(this, ListaCompraActivity::class.java)
             startActivity(intent)
         }
+
+        binding.conexionRed.setOnClickListener {
+            val intent = Intent(this, APIServiceActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
