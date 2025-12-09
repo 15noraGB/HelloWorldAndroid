@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
-
 class ListaCompraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -17,19 +16,8 @@ class ListaCompraActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_lista_compra)
 
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-
-
-
         val recycler = findViewById<RecyclerView>(R.id.recyclerListaCompra)
         recycler.layoutManager = LinearLayoutManager(this)
-
-
 
         fun getShopItems(): List<ShopItem> {
             return listOf(
@@ -42,13 +30,6 @@ class ListaCompraActivity : AppCompatActivity() {
             )
         }
 
-
         recycler.adapter = ListaCompraAdapter(getShopItems())
-
-
-
-        recycler.layoutManager = LinearLayoutManager(this)
-
-
     }
 }
