@@ -1,23 +1,27 @@
 package noragarcia.helloworld
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-
+import noragarcia.helloworld.databinding.ActivityListaCompraBinding
 
 class ListaCompraActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityListaCompraBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_lista_compra)
 
-        val recycler = findViewById<RecyclerView>(R.id.recyclerListaCompra)
-        recycler.layoutManager = LinearLayoutManager(this)
+        // Inicializar binding
+        binding = ActivityListaCompraBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Configurar RecyclerView usando binding
+        binding.recyclerListaCompra.layoutManager = LinearLayoutManager(this)
 
         fun getShopItems(): List<ShopItem> {
             return listOf(
@@ -30,6 +34,12 @@ class ListaCompraActivity : AppCompatActivity() {
             )
         }
 
-        recycler.adapter = ListaCompraAdapter(getShopItems())
+        binding.recyclerListaCompra.adapter = ListaCompraAdapter(getShopItems())
+
+        // Navegar al pulsar el FAB
+        binding.botonAnadir.setOnClickListener {
+            val intent = Intent(this, AnadirProductoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
