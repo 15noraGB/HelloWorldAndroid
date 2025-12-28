@@ -40,8 +40,9 @@ class NavegacionActivity : AppCompatActivity() {
         }
 
         binding.conexionRed.setOnClickListener {
-            val intent = Intent(this, RetrofitClient::class.java)
+            val intent = Intent(this, ConexionRedActivity::class.java)
             startActivity(intent)
         }
+
     }
 }

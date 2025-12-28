@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
-
+        <activity
+            android:name=".ConexionRedActivity"
+            android:exported="false" />
         <activity
             android:name=".AnadirProductoActivity"
             android:exported="false" />
