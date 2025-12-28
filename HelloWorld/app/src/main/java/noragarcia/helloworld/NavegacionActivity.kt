@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import noragarcia.helloworld.databinding.ActivityMainBinding
 import noragarcia.helloworld.databinding.ActivityNavegacionBinding
 import android.content.Intent
+import noragarcia.helloworld.net.RetrofitClient
 
 
 class NavegacionActivity : AppCompatActivity() {
@@ -39,7 +40,7 @@ class NavegacionActivity : AppCompatActivity() {
         }
 
         binding.conexionRed.setOnClickListener {
-            val intent = Intent(this, APIServiceActivity::class.java)
+            val intent = Intent(this, RetrofitClient::class.java)
             startActivity(intent)
         }
     }
