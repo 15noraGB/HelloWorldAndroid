@@ -16,22 +16,28 @@
         android:theme="@style/Theme.HelloWorld">
         <activity
             android:name=".ConexionRedActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".NavegacionActivity"/>
         <activity
             android:name=".AnadirProductoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ListaCompraActivity"/>
         <activity
             android:name=".DetalleListaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ListaCompraActivity"/>
         <activity
             android:name=".ListaCompraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".NavegacionActivity"/>
         <activity
             android:name=".ResultadoHelloWorldActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".HelloWorldActivity"/>
         <activity
             android:name=".HelloWorldActivity"
-            android:exported="false" /> <!-- Esta es la Activity que se abre al iniciar la app -->
+            android:exported="false"
+            android:parentActivityName=".NavegacionActivity"/> <!-- Esta es la Activity que se abre al iniciar la app -->
         <activity
             android:name=".NavegacionActivity"
             android:exported="true">
@@ -43,7 +49,8 @@
         </activity> <!-- Esta Activity solo se abre desde el botón -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".NavegacionActivity"/>
     </application>
 
 </manifest>
